@@ -72,7 +72,7 @@
   position: absolute;
   z-index: -1;
   top: 40vh;
-  left: 60vw;
+  left: 58vw;
   transform: translate(-50%, -50%);
   /*縦横幅指定*/
   height: 100vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
