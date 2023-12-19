@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 103vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeOut 1.5s 2.5s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loading__logo {
+  opacity: 0;
+  animation: logo_fade 2s 0.5s forwards;
+  width: 300px;
+}
+
+@keyframes logo_fade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#header{
+  position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
+  height: 100vh;/*高さを全画面にあわせる*/
+  padding: 0;
+} 
+#header p{
+  font-family: 'Murecho', sans-serif;
+}
+
+#video-area{
+  height: 120vh;
+  position: fixed;
+  z-index: -1;/*最背面に設定*/
+  top: 0;
+  right:0;
+  left:0;
+  bottom:0;
+  overflow: hidden;
+}
+
+#video {
+  /*天地中央配置*/
+  position: absolute;
+  z-index: -1;
+  top: 40vh;
+  left: 60vw;
+  transform: translate(-50%, -50%);
+  /*縦横幅指定*/
+  height: 100vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+  min-height: 100%;
+  min-width: 100%;
+}
+/*========= レイアウトのためのCSS ===============*/
+
+h1{
+  font-size: 5rem;
+  line-height: 120%;
+  padding: 10% 0 7%;
+  margin: 0;
+}
+p{
+  font-size: 17px;
+  margin: 0;
+  padding: 3% 0 8%;
+}
+
+small{
+  color:#fff;
+  display: block;
+  text-align: center;
+}
+
+#header{
+  /* margin-left: -1vw; */
+  width: 100%;
+  background: rgba(0, 0, 0, 0.68);
+  color: #cbd0d3;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+}
+
+body{
+	width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+/*その他と主な共通部分は省略*/
+
+a.btn_07 {
+  position:relative;
+  top: 4%;
+  font-size: 33px;
+  background: #cbd0d3;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	width: 60vw;
+	margin: auto;
+	padding: 1rem 4rem;
+	color: #a90c0c;
+	border-bottom: 7px solid #a90c0c;
+	border-radius: 100vh;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+	-webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+	transition: 0.5s;
+  margin: 0 auto;
+}

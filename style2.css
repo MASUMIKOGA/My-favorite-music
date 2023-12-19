@@ -1,0 +1,98 @@
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeOut 1.5s 2.5s forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  .loading__logo {
+    opacity: 0;
+    animation: logo_fade 2s 0.5s forwards;
+    width: 300px;
+  }
+  
+  @keyframes logo_fade {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  }
+  body {
+    background:linear-gradient(45deg, #4dffff,#000,#ffadad);/*グラデーションを定義*/
+    background-size: 200% 200%;/*サイズを大きくひきのばす*/
+    animation: bggradient 10s ease infinite;
+  }
+  
+  @keyframes bggradient{
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+h1{
+    font-size: 42px;
+    margin: 0;
+    padding: 4% 0 1%;
+    color: #fff;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+}
+.kousin{
+  color: #cacaca;
+  font-family: 'Murecho', sans-serif;
+  text-align: right;
+  font-size: 12px;
+}
+.syosai{
+  color: #fff;
+  font-size: large;
+  text-align: center;
+  font-family: 'Murecho', sans-serif;
+  margin: 3% 0 3%;
+}
+.kome{
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  font-family: 'Murecho', sans-serif;
+  margin: 3% 0 3%;
+}
+a{
+  font-family: 'Anton', sans-serif;
+    text-decoration: none;
+    color: #cacaca;
+    font-size: 30px;
+    margin-left: 70vw;
+}
